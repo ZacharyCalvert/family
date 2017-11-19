@@ -1,6 +1,78 @@
-# Public Key 
+- [About](#about)
+- [Setup](#setup)
+    - [Users Needing to Unpack an Encrypted Payload](#unpack)
+    - [Users Creating a Distribution](#packing)
+- [Usage](#usage)
+    - [Content](#content)
+    - [Create Distribution](#create)
+    - [Unpack Distribution](#unpack)
+    - [Recommendations](#recommendations)
+- [Zach's Information](#zach)
 
-This is Zach Calvert's public key:
+# <a name="about">About</a>
+
+ _Disclaimer:  I am not a security expert and do not claim 
+that the information/instructions below will protect your 
+assets.  Use at your own risk._
+
+This is a set of scripts for preparing a protected distribution
+for family/friends/work of protected or privileged information.
+
+# <a name="setup">Setup</a>
+
+## <a name="unpack">Users Needing to Unpack</a>
+
+1. You will need the command line gpg utility on your command path
+1. Place the password in the file "pass".
+
+## <a name="packing">Users Creating a Distribution</a>
+
+1. You will need the command line gpg utility on your command path
+1. Create a lengthy password in the file "pass"
+1. Prepare your PGP Key by running ```gpg --gen-key```
+1. Create your public key for signature verification with ```gpg --armor --export <keyID>``` using the keyID from the previous step.
+
+# <a name="usage">Usage</a>
+
+## <a name="content">Content</a>
+
+Privileged content goes directly into a folder labeled
+"private".
+
+Additional content may go under a folder labeled
+"public" but is generally only useful for git commits.  
+
+Finally, anything you wish to have for distribution, but have
+a signature created for, place under the folder "sign".
+
+## <a name="create">Create Distribution</a>
+
+Run ```./create.sh```
+
+## <a name="unpack">Unpack Distrubtion</a>
+
+Create any protected distribution under the folder
+"dist" and run ```./unpack.sh```
+
+Read the output for "where" the files are placed.
+
+## <a name="recommendations">Recommendations</a>
+
+- Only ones who must be able to unpack the distribution have the "pass" file
+- Do not keep the password file in the same place as the packed distribution
+    - Using this to distribute your financial information, accounts, passwords?  Send the password to one trusted person, the payload to another, and the instructions to unpack to yet a third.  
+- Make sure you share the instructions for unpacking
+- Do not share the packed distribution to someone you don't trust as it allows for infinite password attempts to unpack the content
+
+ _Note_
+I'm using this to distribute and sign my last will and testament to family, and financial details to my last of kin.  My password will go to trusted family members and my distribution will go to my wife.  The password and the distribution are to be combined upon my death.  
+
+# <a name="zach">Zach Calvert's Information</a>
+
+## Public Key 
+
+This is Zach Calvert's public PGP key for signature 
+verification:
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
