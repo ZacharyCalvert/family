@@ -1,6 +1,7 @@
 - [About](#about)
 - [Setup](#setup)
     - [Users Needing to Unpack an Encrypted Payload](#unpack)
+    - [Users Needing to Verify a Signature](#verify)
     - [Users Creating a Distribution](#packing)
 - [Usage](#usage)
     - [Content](#content)
@@ -24,6 +25,12 @@ for family/friends/work of protected or privileged information.
 
 1. You will need the command line gpg utility on your command path
 1. Place the password in the file "pass".
+
+## <a name="verify">Users Needing to Verify a Signature</a>
+
+1. You will need the command line gpg utility on your command path
+1. Run ```gpg --import Signature.gpg```.  The signature is what you should have received from the signer.  
+1. To verify a file, you must run ```gpg --verify <thefile>.sig <thefile>```
 
 ## <a name="packing">Users Creating a Distribution</a>
 
