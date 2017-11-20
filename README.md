@@ -29,7 +29,7 @@ for family/friends/work of protected or privileged information.
 ## <a name="verify">Users Needing to Verify a Signature</a>
 
 1. You will need the command line gpg utility on your command path
-1. Run ```gpg --import Signature.gpg```.  The signature is what you should have received from the signer.  
+1. Run ```gpg --import ./public/Signature.gpg```.  The signature is what you should have received from the signer.  
 1. To verify a file, you must run ```gpg --verify <thefile>.sig <thefile>```
 
 ## <a name="packing">Users Creating a Distribution</a>
