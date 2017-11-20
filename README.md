@@ -6,7 +6,7 @@
 - [Usage](#usage)
     - [Content](#content)
     - [Create Distribution](#create)
-    - [Unpack Distribution](#unpack)
+    - [Unpack Distribution](#unpackd)
     - [Recommendations](#recommendations)
 - [Zach's Information](#zach)
 
@@ -56,7 +56,7 @@ a signature created for, place under the folder "sign".
 
 Run ```./create.sh```
 
-## <a name="unpack">Unpack Distrubtion</a>
+## <a name="unpackd">Unpack Distribution</a>
 
 Create any protected distribution under the folder
 "dist" and run ```./unpack.sh```
